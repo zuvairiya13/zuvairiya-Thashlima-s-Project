@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Home - Ambur Biriyani Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+.ani
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 50px darkblue;
+    animation: loop 5s 5s infinite;
+    transition: ease-in 3s;
+    background-color: #57cbd6;
+    width: 1100px;
+}
+
+.ani:hover
+{
+width: 300px;
+}
+@keyframes loop
+{
+
+    0%
+    {
+        color: rgb(227, 129, 129);
+        right:300px;
+    }
+    25%
+    {
+        color: rgb(186, 135, 98);
+    }
+    50%
+    {
+        color: rgb(241, 111, 232);
+    }
+    75%
+    {
+        color: rgb(120, 233, 120);
+    }
+    100%
+    {
+        color: rgb(130, 122, 217);
+    }
+
+}
+@media (min-width:300px) and (max-width:600px) {
+    .designs {
+        color: rgb(76, 0, 255);
+        animation: moves 1s 1s infinite;
+        transform: rotate(30deg);
+        transition: ease-in 2s;
+        background-color: rgb(255, 168, 127);
+        width: 200px;
+    }
+
+    .grids {
+
+        display: block;
+    }
+}
+</style>
+<body>
+
+<header>
+
+  <h1 onmouseover="mOver(this)" onmouseout="mOut(this)" class="ani">Ambur Biriyani Restaurant</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="reservation.html">Reservation</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Welcome to My Restaurant</h2>
+  <p>        Right Place to choose your food!
+</p>
+  <p>We serve delicious meals made with love and the freshest ingredients.</p>
+  <p>    Ambur biryani is a delightful one-pot meal with succulent pieces of meat cooked to perfection along with the aromatic jeera samba rice, mint leaves, coriander leaves and whole spices. The flavor and taste of meat is more dominant in Ambur biryani than the other ones due to the fewer spices used.
+</p>
+  <img src="rest.webp" alt="Restaurant" style="width:100%;">
+</div>
+ <footer>
+  <center>
+<h3>
+        Address:
+    </h3>
+    <p class="para">
+        Prati amman kovil near,
+    </p>
+        <p class="para">
+            Perundurai road,
+        </p>
+        <p class="para">
+            Chennimalai
+        </p>
+        <section id="contact"></section>
+        <p class="para">
+            
+            Contact: 7010857174
+        </p>
+        <h4 id="head">
+            Orders available for all Occasions
+        </h4>
+        
+    </footer>
+  </center>
+  <script>
+function mOver(obj) {
+  obj.innerHTML = "Ambur Biriyani Restarunt"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Welcomes You"
+}
+</script>
+</body>
+</html>

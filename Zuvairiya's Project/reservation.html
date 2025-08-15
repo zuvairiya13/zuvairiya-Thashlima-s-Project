@@ -1,0 +1,119 @@
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #fff3e0, #ffe0b2);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #d84315;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+    }
+    .container {
+      max-width: 500px;
+      background: white;
+      padding: 20px;
+      margin: 40px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #d84315;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+      border: none;
+    }
+    button:hover {
+      background-color: #bf360c;
+    }
+    .success {
+      color: green;
+      font-weight: bold;
+      margin-top: 15px;
+      text-align: center;
+    }
+    a{
+      color:black;
+      font-weight:bolder;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>🍽️ Restaurant Reservation</header>
+ 
+  <div class="container">
+    <form id="reservationForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required placeholder="Enter your name" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required placeholder="Enter your email" />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" required placeholder="Enter your phone number" />
+
+      <label for="date">Date</label>
+      <input type="date" id="date" required />
+
+      <label for="time">Time</label>
+      <input type="time" id="time" required />
+
+      <label for="guests">Number of Guests</label>
+      <select id="guests" required>
+        <option value="">Select guests</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5+</option>
+      </select>
+      <button type="submit">Reserve Table</button>
+      <div class="success" id="successMsg"></div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("reservationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let phone = document.getElementById("phone").value.trim();
+      let date = document.getElementById("date").value;
+      let time = document.getElementById("time").value;
+      let guests = document.getElementById("guests").value;
+
+      if (!name || !email || !phone || !date || !time || !guests) {
+        alert("Please fill in all fields.");
+        return;
+      }
+      
+      document.getElementById("successMsg").textContent =
+        `✅ Thank you, ${name}! Your table for ${guests} on ${date} at ${time} has been reserved.`;
+      
+      document.getElementById("reservationForm").reset();
+    });
+    
+  </script>
+  <center>
+  <a href="index.html">Back to Home</form><br><br><br><br>
+    </center>
